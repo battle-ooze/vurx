@@ -173,7 +173,7 @@ export default class MyComponent extends Vue {
 * `name` 映射的本地属性名
 * `mapFn` 自定义 `getter`，参数是 `observable`
 
-#### `Action`
+#### `Action(module, name)`
 * `module` 模块名
 * `name` 映射的本地属性名
 
