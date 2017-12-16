@@ -7,7 +7,7 @@
 
 #### NPM
 
-``` bash
+```bash
 npm install vue vue-rx vurx --save
 ```
 
@@ -15,8 +15,9 @@ npm install vue vue-rx vurx --save
 import Vue from 'vue'
 import Rx from 'rxjs/Rx'
 import VueRx from 'vue-rx'
+import Vurx from 'vurx'
 Vue.use(VueRx, Rx)
-Vue.use(Store)
+Vue.use(Vurx)
 ```
 
 ### 用法
@@ -54,7 +55,7 @@ export default class MyStore {
 #### 初始化
 
 ```Javascript
-var store = Store.init({
+var store = Vurx.init({
   store: { MyStore }
 })
 ```
@@ -78,7 +79,7 @@ store.MyStore.setFoo('abc')
 将 store 注入 Vue 实例
 
 ```Javascript
-var store = Store.init({
+var store = Vurx.init({
   store: { MyStore }
 })
 
