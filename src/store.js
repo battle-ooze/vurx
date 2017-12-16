@@ -74,9 +74,9 @@ function mapActions (module, actions) {
   return res
 }
 
-function mapObservables (ctx, module, observable) {
+function mapObservables (ctx, module, observables) {
   const res = {}
-  normalizeMap(observable).forEach(({key, val}) => {
+  normalizeMap(observables).forEach(({key, val}) => {
     val = ctx.$store[module] && ctx.$store[module][val]
     res[key] = typeof val === 'function' ? val.call(ctx.$store[module]) : val
   })

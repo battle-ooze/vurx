@@ -144,7 +144,7 @@ var vm = new Vue({
 
 ```Js
 import Vue from 'vue'
-import { Observable, Action } from '../dist/class'
+import { Observable, Action } from 'vurx/lib/class'
 import Component from 'vue-class-component'
 
 @Component
@@ -156,4 +156,24 @@ export default class MyComponent extends Vue {
   setFoo () {}
 }
 ```
+
+### API 
+
+#### `mapObservables(ctx, module, observables)`
+* `ctx` 当前实例的 `this`
+* `module` 模块名
+* `observables` 需要映射的 `observable` 和 `getter`
+
+#### `mapActions(module, actions)`
+* `module` 模块名
+* `actions` 需要映射的 `action`
+
+#### `Observable(module, name, mapFn)`
+* `module` 模块名
+* `name` 映射的本地属性名
+* `mapFn` 自定义 `getter`，参数是 `observable`
+
+#### `Action`
+* `module` 模块名
+* `name` 映射的本地属性名
 
